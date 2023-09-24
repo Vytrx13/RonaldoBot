@@ -1,4 +1,5 @@
 import random
+import bot
 
 materia = [
     "Método dos Nós e Método das Barras\nEm uma estrutura com barras de treliça, usando o fato de que cada uma dessas barras corresponde a uma única incógnita (o escalar que dá o módulo e o sentido do par de forças), não adianta isolar uma barra e escrever suas equações de equilíbrio – elas já serão identicamente satisfeitas. Para essas estruturas há duas técnicas de abordagem. No chamado Método dos nós, as equações são obtidas impondo-se o equilíbrio dos nós (pontos de conexão das barras). No chamado Método das barras, a estrutura é seccionada (cortada) em subestruturas, impondo-se o equilíbrio de cada parte.",
@@ -15,11 +16,9 @@ materia = [
 def handleResponse(message) -> str:
     processedMessage = message.lower()
     
-    if processedMessage == "!r insulto":
+    if processedMessage == "!r insulte":
         return "Isso não é relatório!!!! Vc se acha muito espertinho?"
     
-    if processedMessage == "!r roll":
-        return "You rolled a " + str(random.randint(1, 6))
     
     if processedMessage == "!r bom_dia":
         return "Bom dia."
@@ -31,8 +30,30 @@ def handleResponse(message) -> str:
         return materia[random.randint(0, len(materia) - 1)]
     
     if processedMessage == "!r help":
-        return "Todos os comandos começam com !r. Os comandos são: \ninsulto \nbom_dia \nmotive \nmateria" 
+        return "Todos os comandos começam com !r. Os comandos são: \ninsulte \nbom_dia \nmotive \nmateria \nencare \nuwu \nanalise \n\ncomandos de cultura:\nrw\nrw maid\nrw uniform" 
     
+    if processedMessage == "!r":
+        return "Digite !r help para ver os comandos."
+    
+    if processedMessage == "!r encare":
+        return "encare"
+    
+    if processedMessage == "!r uwu":
+        return "uwu"
+    
+    if processedMessage == "!r analise":
+        return "analise"
+    
+    
+    
+    if processedMessage == "!rw":
+        return "waifu"
+    
+    if processedMessage == "!rw maid":
+        return "waifu_maid"
+    
+    if processedMessage == "!rw uniform":
+        return "waifu_uniform"
     
     
     
